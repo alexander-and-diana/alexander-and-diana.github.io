@@ -385,12 +385,20 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 }
 .fh5co-cover {
-	height: 900px;
 	background-size: cover;
-	// background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 	width: 100%;
+
+	@media screen and (max-width: $screen-sm) {
+		// height: 600px;
+		background-position: center top !important;
+		
+		.display-t,
+		.display-tc {
+		padding-top: 60px !important;
+		}
+	}
 	.overlay {
 		z-index:0;
 		position: absolute;
@@ -405,15 +413,18 @@ h1, h2, h3, h4, h5, h6, figure {
 		z-index: 10;
 	}
 	@media screen and (max-width: $screen-sm) {
-		height: 600px;
+		// height: 600px !important;
 	}
 	.display-t,
 	.display-tc {
-		height: 900px;
+		padding-top: 20px !important;
+		// height: 900px;
+		height: 120vh;
 		display: table;
 		width: 100%;
 		@media screen and (max-width: $screen-sm) {
-			height: 600px;
+			// height: 600px;
+			height: 100vh;
 		}
 	}	
 
